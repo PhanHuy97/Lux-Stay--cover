@@ -466,7 +466,7 @@
 
   .wide .l-1,
   .wide .l-2,
-  .wide .l-2-4,
+  .l-2-4,
   .wide .l-3,
   .wide .l-4,
   .wide .l-5,
@@ -490,7 +490,7 @@
     max-width: 16.66667%;
   }
 
-  .wide .l-2-4 {
+  .l-2-4 {
     flex: 0 0 20%;
     max-width: 20%;
   }
