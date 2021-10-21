@@ -1,11 +1,6 @@
 .header-waper {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.03);
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
   background-color: var(--white-color);
 }
 .header {
@@ -228,6 +223,7 @@
   padding-left: 30px;
   font-size: 2.6rem;
   color: #555;
+  padding-right: 10px;
 }
 
 #header__menu {
@@ -359,7 +355,7 @@
 /* Contaner */
 
 .container {
-  margin-top: 112px;
+  margin-top: 42px;
 }
 
 .slide-waper {
@@ -546,6 +542,9 @@
   top: 26%;
 }
 .suggest-slides .btn-slide.btn-prev {
+  top: 26%;
+}
+.suggest-slides .btn-disable {
   top: 26%;
 }
 .suggest-waper {

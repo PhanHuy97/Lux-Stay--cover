@@ -72,22 +72,11 @@ html {
   color: var(--header-color);
 }
 .btn-slide:hover {
-  border: 1px solid #f65e39;
+  border: 1px solid #f65f391e;
   cursor: pointer;
 }
 .btn-slide:hover i {
   color: #f65e39;
-}
-.btn-slide.disable {
-  opacity: 0.6;
-  cursor: pointer;
-  pointer-events: none;
-}
-.btn-slide.disable:hover {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.btn-slide.disable:hover i {
-  color: var(--header-color);
 }
 .btn-prev {
   position: absolute;
@@ -100,6 +89,17 @@ html {
   top: 43%;
   right: -21px;
   z-index: 1;
+}
+.btn-disable {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 43%;
+  left: -21px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
 @keyframes slidein {

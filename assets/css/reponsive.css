@@ -12,8 +12,16 @@
   .waper {
     padding: 0 20px;
   }
+  .header-waper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
   .header {
     padding: 0 10px;
+    height: 50px;
   }
   .header__search-input-container {
     padding: 10px 20px;
@@ -58,6 +66,12 @@
   }
   .btn-prev {
     left: -8px;
+  }
+  .btn-disable {
+    left: -8px;
+  }
+  .container {
+    margin-top: 92px;
   }
 }
 /* tablet */

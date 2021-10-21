@@ -63,65 +63,131 @@ const app = {
     };
     // xu li cho slide location cu nut bam hai ben
     (() => {
-      let nextBtn = document.querySelector(".location-slides .btn-next");
-      let prevBtn = document.querySelector(".location-slides .btn-prev");
+      const nextBtn = document.querySelector(".location-slides .btn-next");
+      const prevBtn = document.querySelector(".location-slides .btn-prev");
+      const disableBtn = document.querySelector(
+        ".location-slides .btn-disable"
+      );
+
       nextBtn.onclick = () => {
         _this.isSlideLocation++;
         document.getElementById(
           "radio-location" + _this.isSlideLocation
         ).checked = true;
-        if (_this.isSlideLocation > 1) prevBtn.classList.remove("disable");
-        if (_this.isSlideLocation > 3) nextBtn.classList.add("disable");
+        if (_this.isSlideLocation > 1) {
+          disableBtn.style.display = "none";
+        }
+        if (_this.isSlideLocation > 3) {
+          disableBtn.style.display = "block";
+          disableBtn.style.left = "auto";
+          if (window.innerWidth < 1023) {
+            disableBtn.style.right = -8 + "px";
+          } else {
+            disableBtn.style.right = -21 + "px";
+          }
+        }
       };
       prevBtn.onclick = () => {
         _this.isSlideLocation--;
         document.getElementById(
           "radio-location" + _this.isSlideLocation
         ).checked = true;
-        if (_this.isSlideLocation < 2) prevBtn.classList.add("disable");
-        if (_this.isSlideLocation < 4) nextBtn.classList.remove("disable");
+        if (_this.isSlideLocation < 4) {
+          disableBtn.style.display = "none";
+        }
+        if (_this.isSlideLocation < 2) {
+          disableBtn.style.display = "block";
+          disableBtn.style.right = "auto";
+          if (window.innerWidth < 1023) {
+            disableBtn.style.left = -8 + "px";
+          } else {
+            disableBtn.style.left = -21 + "px";
+          }
+        }
       };
     })();
     // xu li slide cua suggest
     (() => {
       let nextBtn = document.querySelector(".suggest-slides .btn-next");
       let prevBtn = document.querySelector(".suggest-slides .btn-prev");
+      const disableBtn = document.querySelector(".suggest-slides .btn-disable");
       nextBtn.onclick = () => {
         _this.isSlideSuggest++;
         document.getElementById(
           "suggest-radio" + _this.isSlideSuggest
         ).checked = true;
-        if (_this.isSlideSuggest > 1) prevBtn.classList.remove("disable");
-        if (_this.isSlideSuggest > 3) nextBtn.classList.add("disable");
+        if (_this.isSlideSuggest > 1) {
+          disableBtn.style.display = "none";
+        }
+        if (_this.isSlideSuggest > 3) {
+          disableBtn.style.display = "block";
+          disableBtn.style.left = "auto";
+          if (window.innerWidth < 1023) {
+            disableBtn.style.right = -8 + "px";
+          } else {
+            disableBtn.style.right = -21 + "px";
+          }
+        }
       };
       prevBtn.onclick = () => {
         _this.isSlideSuggest--;
         document.getElementById(
           "suggest-radio" + _this.isSlideSuggest
         ).checked = true;
-        if (_this.isSlideSuggest < 2) prevBtn.classList.add("disable");
-        if (_this.isSlideSuggest < 4) nextBtn.classList.remove("disable");
+        if (_this.isSlideSuggest < 4) {
+          disableBtn.style.display = "none";
+        }
+        if (_this.isSlideSuggest < 2) {
+          disableBtn.style.display = "block";
+          disableBtn.style.right = "auto";
+          if (window.innerWidth < 1023) {
+            disableBtn.style.left = -8 + "px";
+          } else {
+            disableBtn.style.left = -21 + "px";
+          }
+        }
       };
     })();
     // su li slide cua dicover
     (() => {
       let nextBtn = document.querySelector(".dicover-slides .btn-next");
       let prevBtn = document.querySelector(".dicover-slides .btn-prev");
+      const disableBtn = document.querySelector(".dicover-slides .btn-disable");
       nextBtn.onclick = () => {
         _this.isSlideDicover++;
         document.getElementById(
           "dicover-radio" + _this.isSlideDicover
         ).checked = true;
-        if (_this.isSlideDicover > 1) prevBtn.classList.remove("disable");
-        if (_this.isSlideDicover > 3) nextBtn.classList.add("disable");
+        if (_this.isSlideDicover > 1) {
+          disableBtn.style.display = "none";
+        }
+        if (_this.isSlideDicover > 3) {
+          disableBtn.style.display = "block";
+          disableBtn.style.left = "auto";
+          if (window.innerWidth < 1023) {
+            disableBtn.style.right = -8 + "px";
+          } else {
+            disableBtn.style.right = -21 + "px";
+          }
+        }
       };
       prevBtn.onclick = () => {
         _this.isSlideDicover--;
         document.getElementById(
           "dicover-radio" + _this.isSlideDicover
         ).checked = true;
-        if (_this.isSlideDicover < 2) prevBtn.classList.add("disable");
-        if (_this.isSlideDicover < 4) nextBtn.classList.remove("disable");
+        if (_this.isSlideDicover < 4) {
+          disableBtn.style.display = "none";
+        }
+        if (_this.isSlideDicover < 2) {
+          disableBtn.style.display = "block";
+          disableBtn.style.right = "auto";
+          if (window.innerWidth < 1023) {
+            disableBtn.style.left = -8 + "px";
+          } else {
+            disableBtn.style.left = -21 + "px";
+          }
+        }
       };
     })();
   },
