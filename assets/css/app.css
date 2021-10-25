@@ -128,6 +128,7 @@
   margin-top: 12px;
   cursor: default;
   background-color: var(--white-color);
+  z-index: 1;
 }
 .quality__list {
   list-style: none;
@@ -305,6 +306,7 @@
   background-color: var(--white-color);
   border-radius: 4px;
   animation: slidein ease 0.3s;
+  z-index: 1;
 }
 .currency-box::before {
   content: "";
